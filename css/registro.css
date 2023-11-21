@@ -1,0 +1,24 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    color:  #00acee;
+}
+
+.title {
+    text-align: start;
+    font-size: 64px;
+    font-weight: bold;
+    color: #0f1419;
+    margin-bottom: 20px;
+}
+
+.aviso-privacidad h3{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.aviso-privacidad p{
+    font-size: 14px;
+    color: #71767b;
+}

@@ -1,0 +1,26 @@
+/*Estilos generales*/
+:root {
+    --fuenteParrafos:'Roboto', sans-serif;
+
+    --azul: #00acee;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+
+body {
+    background-color: var(--negro);
+    font-family: var(--fuenteParrafos);
+    line-height: 2;
+}
+
+/** Globales **/
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+.linkRegistro {
+    color: var(--azul);
+}

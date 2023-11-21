@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/registro.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-5 d-flex justify-content-center align-items-center">
+      <div class="x-container d-flex justify-content-center align-items-center" style="width: 100%; height: 100%;">
+        <svg viewBox="0 0 26 26" aria-hidden="true"
+          class="r-1nao33i r-4qtqp9 r-yyyyoo r-rxcuwo r-1777fci r-m327ed r-dnmrzs r-494qqr r-bnwqim r-1plcrui r-lrvibr">
+          <g>
+            <path
+              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+            </path>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="col-7">
+      <h1 class="title mt-5 ">Crea tu cuenta</h1>
+      <form action="./Backend/Files/registrar.php" method="post">
+        <!-- nombre -->
+        <div class="mb-3 rounded">
+          <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
+        </div>
+        <!-- a -->
+        <div class="mb-3 rounded">
+          <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Apellidos">
+        </div>
+        <!-- correo -->
+        <div class="mb-3 rounded">
+          <input type="email" class="form-control" name="email" id="email" placeholder="Correo">
+        </div>
+        <!-- usuario -->
+        <div class="mb-3 rounded">
+          <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario">
+        </div>
+        <!-- contraseña -->
+        <div class="mb-3 rounded">
+          <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña">
+        </div>
+        <!-- aviso de privacidad -->
+        <div class="aviso-privacidad">
+          <h3>Fecha de nacimiento</h3>
+          <p>Esta información no será pública. Confirma tu propia edad, incluso si esta cuenta es para una empresa, una mascota u otra cosa.</p>
+        </div>
+        <!-- fecha de nacimiento -->
+        <div class="mb-3 rounded">
+          <input type="text" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="AAAA/MM/DD">
+        </div>
+       
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-lg rounded-pill mb-2" style="background-color:  #00acee; color: #ffffff;">Crear</button>
+          </div>
+        <hr>
+
+        <p class="m-4 fs-4">¿Ya tienes una cuenta? <a class="linkRegistro" href="index.html">Inicia Sesión.</a></p>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="./js/registro.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
