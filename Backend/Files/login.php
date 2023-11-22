@@ -6,7 +6,7 @@
 
     if($body !== null) {
         $email = $body['email'];
-        $pass = $body['pass'];
+        $password = $body['password'];
 
         $queryUsuario = "SELECT * FROM usuarios WHERE usuario='$email'";
         $validaUsuario = mysqli_query($con, $queryUsuario);
