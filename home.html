@@ -64,7 +64,18 @@
                             </div>
                         </div>
                     </div>
+                    <div class="card rounded mt-3">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <img class="img-xs rounded-circle" src="./img/user.png" alt="">
+                                <div class="ml-2">
+                                    <p id="userBlog" class="fw-bold  mb-0 ">Mike Popescu</p>
+                                    <p id="emailBlog" class="fw-bold mb-0 text-muted">Mike Popescu</p>
 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             
                 <!-- left wrapper end -->
@@ -74,58 +85,64 @@
                         <div class="col-md-12 grid-margin">
                             <div class="card rounded">
                                 <div class="card-body">
-                                    <div class="form-group">
-                                        <input class="form-input" placeholder="Titula tu post" name="titulo" style="width: 100%; border: none;">
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea class="form-input" placeholder="¿Qué estás pensando?" name="mensaje" style="width: 100%; border: none;"></textarea>
-                                    </div>
+                                    <form class="form-block" method="post" action="./Backend/Files/newPost.php">
+                                        <input type="hidden" name="idUsuario" id="idUsuario">
+                                        <div class="form-group">
+                                            <input class="form-input" placeholder="Titula tu Post" name="titulo" style="width: 100%; border: none;">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-input" placeholder="¿Qué estás pensando?" name="mensaje" style="width: 100%; border: none;"></textarea>
+                                        </div>
+
+                                        <div class="actionsPosts d-flex post-actions">
+                                            <a href="#" class="d-flex align-items-center text-muted mr-4 p-1 h5">
+                                                <i class="actionsPosts bi bi-card-image"></i>
+                                            </a>
+    
+                                            <a href="#" class="d-flex align-items-center text-muted mr-4 p-1 h5">
+                                                <i class="actionsPosts bi bi-filetype-gif"></i>
+                                            </a>
+    
+                                            <a href="#" class="d-flex align-items-center text-muted mr-4 p-1 h5">
+                                                <i class="actionsPosts bi bi-list"></i>
+                                            </a>
+    
+                                            <a href="#" class="d-flex align-items-center text-muted mr-4 p-1 h5">
+                                                <i class="actionsPosts bi bi-emoji-smile"></i>
+                                            </a>
+    
+                                            <a href="#" class="d-flex align-items-center text-muted mr-4 p-1 h5">
+                                                <i class="actionsPosts bi bi-calendar4"></i>
+                                            </a>
+    
+                                            <a href="#" class="d-flex align-items-center text-muted mr-4 p-1 h5">
+                                                <i class="actionsPosts bi bi-geo-alt-fill"></i>
+                                            </a>
+                                        </div>
+
+                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                            <button class="btn rounded-pill" style="background-color: #00acee; color: #ffffff;" type="submit">Publicar</button>
+                                        </div>
+
+                                    </form>
                                 </div>
-
-                                <div class="card-body">
-                                    <div class="actionsPosts d-flex post-actions">
-                                        <a href="#" class="d-flex align-items-center text-muted mr-4 p-1 h5">
-                                            <i class="actionsPosts bi bi-card-image"></i>
-                                        </a>
-
-                                        <a href="#" class="d-flex align-items-center text-muted mr-4 p-1 h5">
-                                            <i class="actionsPosts bi bi-filetype-gif"></i>
-                                        </a>
-
-                                        <a href="#" class="d-flex align-items-center text-muted mr-4 p-1 h5">
-                                            <i class="actionsPosts bi bi-list"></i>
-                                        </a>
-
-                                        <a href="#" class="d-flex align-items-center text-muted mr-4 p-1 h5">
-                                            <i class="actionsPosts bi bi-emoji-smile"></i>
-                                        </a>
-
-                                        <a href="#" class="d-flex align-items-center text-muted mr-4 p-1 h5">
-                                            <i class="actionsPosts bi bi-calendar4"></i>
-                                        </a>
-
-                                        <a href="#" class="d-flex align-items-center text-muted mr-4 p-1 h5">
-                                            <i class="actionsPosts bi bi-geo-alt-fill"></i>
-                                        </a>
-                                    </div>
-                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                        <button class="btn rounded-pill" style="background-color: #00acee; color: #ffffff;" type="button">Publicar</button>
-                                    </div>
-                                </div>
-                                
                             </div>
                         </div>
 
+                        <div id="postsUsuarios">
+                            Hola
+                        </div>
+
                         <div class="col-md-12">
-                            <template>
+                            <template id="cardPost">
                                 <div class="card rounded">
                                     <div class="card-header">
                                         <div class="d-flex align-items-center justify-content-between">
                                             <div class="d-flex align-items-center">
-                                                <img class="img-xs rounded-circle" src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="">
+                                                <img class="img-xs rounded-circle" src="./img/user.png" alt="">
                                                 <div class="ml-2">
-                                                    <p>Mike Popescu</p>
-                                                    <p class="tx-11 text-muted">5 min ago</p>
+                                                    <p class="usuarioName">Mike Popescu</p>
+                                                    <p class="fecha tx-11 text-muted">5 min ago</p>
                                                 </div>
                                             </div>
                                             <div class="dropdown">
@@ -167,8 +184,8 @@
                                         </div>
                                     </div>
                                     <div class="card-body">
-                                        <p class="mb-3 tx-14">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        <img class="img-fluid" src="../../../assets/images/sample2.jpg" alt="">
+                                        <p class="tituloPost mb-3 tx-14">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <p class="mensajePost mb-3 tx-14">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                     </div>
                                     <div class="card-footer">
                                         <div class="d-flex post-actions">
@@ -281,5 +298,7 @@
             </div>
         </div>
         </div>
+
+    <script src="./js/home.js"></script>
 </body>
 </html>
