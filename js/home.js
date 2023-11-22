@@ -17,7 +17,7 @@ const loadPost = async () => {
     dibujandoPosts(items.MESSAGE)
 }
 const dibujandoPosts = posts => {
-    postContainer.innerHTML = ''
+    postContainer.innerHTML = '' 
     posts.forEach((item) => {
         postCard.querySelector('.usuarioNombre').textContent = item.idUsuario
         postCard.querySelector('.fecha').textContent = item.fecha
