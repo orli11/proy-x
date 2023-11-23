@@ -1,3 +1,4 @@
+// cambio para prueba 
 let loggedUser = {}
 
 const postContainer = document.getElementById('postUsuarios')
