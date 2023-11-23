@@ -14,7 +14,7 @@
         if($validaUsuario->num_rows > 0) {
             $usuario = $validaUsuario->fetch_assoc();
 
-            if(password_verify($password, $usuario['password'])) {
+            if(password_verify($pass, $usuario['password'])) {
                 echo json_encode(['STATUS' => 'SUCCESS', 'MESSAGE' => 'Success', 'USUARIO' => $usuario]);
             } else {
                 echo json_encode(['STATUS' => 'ERROR', 'MESSAGE' => 'Contraseñas no coinciden']);
