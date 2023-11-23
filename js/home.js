@@ -1,8 +1,9 @@
 let loggedUser = {}
-const titulo = document.getElementById('userBlog')
+
 const postContainer = document.getElementById('postUsuarios')
 const postCard = document.getElementById('cardPost').content
-const titulo2 = document.getElementById('emailBlog').content
+const titulo = document.getElementById('userBlog')
+const titulo2 = document.getElementById('emailBlog')
 const fragment = document.createDocumentFragment()
 
 
@@ -21,10 +22,10 @@ const dibujandoPosts = posts => {
     console.log(posts)
     postContainer.innerHTML = '' 
     posts.forEach((item) => {
-        postCard.querySelector('.card-subtitle').textContent = item.id_usu
+        postCard.querySelector('.usuarioName').textContent = item.id_usu
         postCard.querySelector('.fecha').textContent = item.fecha
-        postCard.querySelector('.card-title').textContent = item.titulo
-        postCard.querySelector('.card-text').textContent = item.mensaje
+        postCard.querySelector('.tituloPost').textContent = item.titulo
+        postCard.querySelector('.mensajePost').textContent = item.mensaje
 
         const clone = postCard.cloneNode(true)
         fragment.appendChild(clone)
