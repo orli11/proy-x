@@ -21,10 +21,10 @@ const dibujandoPosts = posts => {
     console.log(posts)
     postContainer.innerHTML = '' 
     posts.forEach((item) => {
-        postCard.querySelector('.usuarioNombre').textContent = item.id_usu
+        postCard.querySelector('.card-subtitle').textContent = item.id_usu
         postCard.querySelector('.fecha').textContent = item.fecha
-        postCard.querySelector('.tituloPost').textContent = item.titulo
-        postCard.querySelector('.mensajePost').textContent = item.mensaje
+        postCard.querySelector('.card-title').textContent = item.titulo
+        postCard.querySelector('.card-text').textContent = item.mensaje
 
         const clone = postCard.cloneNode(true)
         fragment.appendChild(clone)
