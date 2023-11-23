@@ -86,7 +86,7 @@
                             <div class="card rounded">
                                 <div class="card-body">
                                     <form class="form-block" method="post" action="./Backend/Files/newPost.php">
-                                        <input type="hidden" name="idUsuario" id="idUsuario">
+                                        <input type="hidden" name="id_usu" id="id_usu">
                                         <div class="form-group">
                                             <input class="form-input" placeholder="Titula tu Post" name="titulo" style="width: 100%; border: none;">
                                         </div>
@@ -123,15 +123,14 @@
                                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                                             <button class="btn rounded-pill" style="background-color: #00acee; color: #ffffff;" type="submit">Publicar</button>
                                         </div>
-
                                     </form>
+                                </div>
+                                 <div id="postsUsuarios">
+                                    Hola
                                 </div>
                             </div>
                         </div>
-
-                        <div id="postsUsuarios">
-                            Hola
-                        </div>
+                       
 
                         <div class="col-md-12">
                             <template id="cardPost">
@@ -142,7 +141,7 @@
                                                 <img class="img-xs rounded-circle" src="./img/user.png" alt="">
                                                 <div class="ml-2">
                                                     <p class="usuarioName">Mike Popescu</p>
-                                                    <p class="fecha tx-11 text-muted">5 min ago</p>
+                                                    <p class="fecha">5 min ago</p>
                                                 </div>
                                             </div>
                                             <div class="dropdown">
@@ -183,10 +182,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-body">
-                                        <p class="tituloPost mb-3 tx-14">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                        <p class="mensajePost mb-3 tx-14">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                    </div>
+                    
                                     <div class="card-footer">
                                         <div class="d-flex post-actions">
                                             <a href="javascript:;" class="d-flex align-items-center text-muted mr-4">
@@ -216,6 +212,8 @@
                         </div>
                     </div>
                 </div>
+
+                
                 <!-- middle wrapper end -->
                 <!-- right wrapper start -->
                 <div class="d-none d-xl-block col-xl-3 right-wrapper">

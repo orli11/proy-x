@@ -1,5 +1,5 @@
 <?php 
-    include("../config/conexion.php");
+    include("../Config/conexion.php");
     $conn = conectar();
 
     $dataPost = file_get_contents('php://input');

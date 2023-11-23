@@ -1,14 +1,13 @@
 <?php
-    include("../config/conexion.php");
+    include("../Config/conexion.php");
     $conn = conectar();
 
     $id_usu = $_POST['id_usu'];
     $titulo = $_POST['titulo'];
     $mensaje = $_POST['mensaje'];
-    $reaccion = 0;
     $fecha = date("Y-m-d");
 
-    $queryInsert = "INSERT INTO posts VALUES(null, '$id_usu', '$titulo', '$mensaje', '$fecha', '$reaccion')";
+    $queryInsert = "INSERT INTO posts VALUES(null, '$id_usu', '$titulo', '$mensaje', '$fecha')";
     $result = mysqli_query($conn, $queryInsert);
     
     if($result){
