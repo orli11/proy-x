@@ -2,7 +2,7 @@ let loggedUser = {}
 const titulo = document.getElementById('userBlog')
 const postContainer = document.getElementById('postUsuarios')
 const postCard = document.getElementById('cardPost').content
-const titulo2 = document.getElementById('emailBlog')
+const titulo2 = document.getElementById('emailBlog').content
 const fragment = document.createDocumentFragment()
 
 
@@ -16,13 +16,15 @@ const loadPost = async () => {
     const items = await posts.json()
     dibujandoPosts(items.MESSAGE)
 }
+
 const dibujandoPosts = posts => {
+    console.log(posts)
     postContainer.innerHTML = '' 
     posts.forEach((item) => {
-        postCard.querySelector('.usuarioNombre').textContent = item.idUsuario
+        postCard.querySelector('.card-subtitle').textContent = item.id_usu
         postCard.querySelector('.fecha').textContent = item.fecha
-        postCard.querySelector('.tituloPost').textContent = item.titulo
-        postCard.querySelector('.mensaajePost').textContent = item.mensaje
+        postCard.querySelector('.card-title').textContent = item.titulo
+        postCard.querySelector('.card-text').textContent = item.mensaje
 
         const clone = postCard.cloneNode(true)
         fragment.appendChild(clone)
@@ -50,7 +52,7 @@ const loadUser = () => {
             const user = await response.json()
             loggedUser = user.MESSAGE
             //console.log(loggedUser)
-            const inputIdUser = document.getElementById('idUsuario')
+            const inputIdUser = document.getElementById('id_usu')
             inputIdUser.value = loggedUser.usuario
             titulo.innerHTML = loggedUser.usuario
             titulo2.innerHTML = loggedUser.email

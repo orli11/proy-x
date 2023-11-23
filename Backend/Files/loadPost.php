@@ -1,5 +1,5 @@
 <?php
-    include("../config/conexion.php");
+    include("../Config/conexion.php");
     $conn = conectar();
 
     $querySelect = "SELECT * FROM posts";
