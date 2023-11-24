@@ -243,3 +243,10 @@ img {
     font-weight: bold;
     color: var(--azul)
 }
+
+
+/* PARTE DE HILO */
+.bi-arrow-left {
+    font-size: 2em;
+    color: black; /* Ajusta este valor a tu gusto */
+}

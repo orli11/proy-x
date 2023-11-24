@@ -19,4 +19,4 @@
     } else {
         echo json_encode(['STATUS' => 'ERROR', 'MESSAGE' => 'Post no registrado']); 
     }
-    ?>
+?>
