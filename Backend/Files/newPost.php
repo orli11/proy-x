@@ -5,7 +5,7 @@
     $id_usu = $_POST['id_usu'];
     $titulo = $_POST['titulo'];
     $mensaje = $_POST['mensaje'];
-    $fecha = date("Y-m-d");
+    $fecha = date("Y-m-d H:i:s");
 
     $queryInsert = "INSERT INTO posts VALUES(null, '$id_usu', '$titulo', '$mensaje', '$fecha')";
     $result = mysqli_query($conn, $queryInsert);

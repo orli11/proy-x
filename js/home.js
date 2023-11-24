@@ -11,6 +11,13 @@ const fragment = document.createDocumentFragment()
 document.addEventListener('DOMContentLoaded', () => {
     loadUser()
     loadPost()
+
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('replyBtn')) {
+            const commentBox = e.target.closest('.post-actions').querySelector('.comment-box');
+            commentBox.classList.toggle('d-none');
+        }
+    })
 })
 
 const loadPost = async () => {
