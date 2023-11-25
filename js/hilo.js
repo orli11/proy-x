@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadDataPost()
 })
 
-
 const loadDataPost = () => {
     const sendData = {
         usuario,
