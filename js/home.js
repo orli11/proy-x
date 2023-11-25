@@ -28,7 +28,7 @@ const loadPost = async () => {
 
 const dibujandoPosts = posts => {
     console.log(posts)
-    postContainer.innerHTML = '' 
+    postContainer.innerHTML = ''
     posts.forEach((item) => {
         postCard.querySelector('.usuarioName').textContent = item.id_usu
         postCard.querySelector('.fecha').textContent = item.fecha
@@ -46,7 +46,7 @@ const loadUser = () => {
     const params = new URLSearchParams(url)
     const usuario = params.get('usuario')
     console.log(usuario)
-    if(usuario) {
+    if (usuario) {
         const sendData = {
             usuario
         }
@@ -57,17 +57,33 @@ const loadUser = () => {
                 'Content-Type': 'application/json'
             }
         })
-        .then(async (response) => {
-            const user = await response.json()
-            loggedUser = user.MESSAGE
-            //console.log(loggedUser)
-            const inputIdUser = document.getElementById('id_usu')
-            inputIdUser.value = loggedUser.usuario
-            titulo.innerHTML = loggedUser.usuario
-            titulo2.innerHTML = loggedUser.email
-            //console.log('=>', response)
-        })
+            .then(async (response) => {
+                const user = await response.json()
+                loggedUser = user.MESSAGE
+                //console.log(loggedUser)
+                const inputIdUser = document.getElementById('id_usu')
+                inputIdUser.value = loggedUser.usuario
+                titulo.innerHTML = loggedUser.usuario
+                titulo2.innerHTML = loggedUser.email
+                //console.log('=>', response)
+            })
     }
 
     console.log('>', usuario)
+}
+
+//funcion para ir al hilo de un post
+const irHilo = (e) => {
+    
+    //obtener los datos del div en el que se da click
+    var divClickeado = event.currentTarget;
+    var usuarioName = divClickeado.querySelector('.usuarioName').textContent;
+    var fecha = divClickeado.querySelector('.fecha').textContent;
+    var tituloPost = divClickeado.querySelector('.tituloPost').textContent;
+    var mensajePost = divClickeado.querySelector('.mensajePost').textContent;
+
+    console.log(usuarioName);
+    console.log(fecha);
+
+    //window.location.href = `http://localhost:8888/proy-x/hilo.html?usuario=prueba${id_post}`
 }
