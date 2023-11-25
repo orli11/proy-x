@@ -57,16 +57,16 @@ const loadUser = () => {
                 'Content-Type': 'application/json'
             }
         })
-            .then(async (response) => {
-                const user = await response.json()
-                loggedUser = user.MESSAGE
-                //console.log(loggedUser)
-                const inputIdUser = document.getElementById('id_usu')
-                inputIdUser.value = loggedUser.usuario
-                titulo.innerHTML = loggedUser.usuario
-                titulo2.innerHTML = loggedUser.email
-                //console.log('=>', response)
-            })
+        .then(async (response) => {
+            const user = await response.json()
+            loggedUser = user.MESSAGE
+            console.log(loggedUser)
+            const inputIdUser = document.getElementById('id_usu')
+            inputIdUser.value = loggedUser.usuario
+            titulo.innerHTML = loggedUser.usuario
+            titulo2.innerHTML = loggedUser.email
+            //console.log('=>', response)
+        })
     }
 
     console.log('>', usuario)
