@@ -28,7 +28,7 @@ const loadPost = async () => {
 
 const dibujandoPosts = posts => {
     console.log(posts)
-    postContainer.innerHTML = '' 
+    postContainer.innerHTML = ''
     posts.forEach((item) => {
         postCard.querySelector('.usuarioName').textContent = item.id_usu
         postCard.querySelector('.fecha').textContent = item.fecha
@@ -46,7 +46,7 @@ const loadUser = () => {
     const params = new URLSearchParams(url)
     const usuario = params.get('usuario')
     console.log(usuario)
-    if(usuario) {
+    if (usuario) {
         const sendData = {
             usuario
         }
@@ -57,17 +57,26 @@ const loadUser = () => {
                 'Content-Type': 'application/json'
             }
         })
-        .then(async (response) => {
-            const user = await response.json()
-            loggedUser = user.MESSAGE
-            //console.log(loggedUser)
-            const inputIdUser = document.getElementById('id_usu')
-            inputIdUser.value = loggedUser.usuario
-            titulo.innerHTML = loggedUser.usuario
-            titulo2.innerHTML = loggedUser.email
-            //console.log('=>', response)
-        })
+            .then(async (response) => {
+                const user = await response.json()
+                loggedUser = user.MESSAGE
+                //console.log(loggedUser)
+                const inputIdUser = document.getElementById('id_usu')
+                inputIdUser.value = loggedUser.usuario
+                titulo.innerHTML = loggedUser.usuario
+                titulo2.innerHTML = loggedUser.email
+                //console.log('=>', response)
+            })
     }
 
     console.log('>', usuario)
+}
+
+//funcion para ir al hilo de un post
+function irHilo(event) {
+    var divClickeado = event.currentTarget;
+    var usuario = encodeURIComponent(divClickeado.querySelector('.usuarioName').textContent);
+    var fecha = encodeURIComponent(divClickeado.querySelector('.fecha').textContent);
+
+    window.location.href = `http://localhost:8888/proy-x/hilo.html?usuario=${usuario}&fecha=${fecha}`;
 }
