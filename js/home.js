@@ -76,11 +76,11 @@ const loadUser = () => {
 const irHilo = (e) => {
     
     //obtener los datos del div en el que se da click
-    var divClickeado = event.currentTarget;
-    var usuarioName = divClickeado.querySelector('.usuarioName').textContent;
-    var fecha = divClickeado.querySelector('.fecha').textContent;
-    var tituloPost = divClickeado.querySelector('.tituloPost').textContent;
-    var mensajePost = divClickeado.querySelector('.mensajePost').textContent;
+    var divClickeado = e.currentTarget;
+    const usuarioName = divClickeado.querySelector('.usuarioName').textContent;
+    const fecha = divClickeado.querySelector('.fecha').textContent;
+    const tituloPost = divClickeado.querySelector('.tituloPost').textContent;
+    const mensajePost = divClickeado.querySelector('.mensajePost').textContent;
 
     console.log(usuarioName);
     console.log(fecha);
