@@ -26,3 +26,7 @@ const loadDataPost = () => {
         console.log(posts)
     })
 }
+
+function backHome(){
+    window.history.back();
+}
