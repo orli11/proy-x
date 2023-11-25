@@ -1,6 +1,6 @@
-var params = new URLSearchParams(window.location.search);
-var usuario = params.get('usuario');
-var fecha = params.get('fecha');
+const params = new URLSearchParams(window.location.search);
+const usuario = params.get('usuario');
+const fecha = params.get('fecha');
 
 console.log(usuario);
 console.log(fecha); 

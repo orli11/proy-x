@@ -74,9 +74,9 @@ const loadUser = () => {
 
 //funcion para ir al hilo de un post
 function irHilo(event) {
-    var divClickeado = event.currentTarget;
-    var usuario = encodeURIComponent(divClickeado.querySelector('.usuarioName').textContent);
-    var fecha = encodeURIComponent(divClickeado.querySelector('.fecha').textContent);
+    const divClickeado = event.currentTarget;
+    const usuario = encodeURIComponent(divClickeado.querySelector('.usuarioName').textContent);
+    const fecha = encodeURIComponent(divClickeado.querySelector('.fecha').textContent);
 
     window.location.href = `http://localhost:8888/proy-x/hilo.html?usuario=${usuario}&fecha=${fecha}`;
 }
