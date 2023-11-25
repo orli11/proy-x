@@ -73,17 +73,10 @@ const loadUser = () => {
 }
 
 //funcion para ir al hilo de un post
-const irHilo = (e) => {
-    
-    //obtener los datos del div en el que se da click
-    var divClickeado = e.currentTarget;
-    const usuarioName = divClickeado.querySelector('.usuarioName').textContent;
-    const fecha = divClickeado.querySelector('.fecha').textContent;
-    const tituloPost = divClickeado.querySelector('.tituloPost').textContent;
-    const mensajePost = divClickeado.querySelector('.mensajePost').textContent;
+function irHilo(event) {
+    var divClickeado = event.currentTarget;
+    var usuario = encodeURIComponent(divClickeado.querySelector('.usuarioName').textContent);
+    var fecha = encodeURIComponent(divClickeado.querySelector('.fecha').textContent);
 
-    console.log(usuarioName);
-    console.log(fecha);
-
-    //window.location.href = `http://localhost:8888/proy-x/hilo.html?usuario=prueba${id_post}`
+    window.location.href = `http://localhost:8888/proy-x/hilo.html?usuario=${usuario}&fecha=${fecha}`;
 }
