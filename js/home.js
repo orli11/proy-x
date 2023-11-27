@@ -7,6 +7,8 @@ const titulo = document.getElementById('userBlog')
 const titulo2 = document.getElementById('emailBlog')
 const fragment = document.createDocumentFragment()
 
+var userFrom = '';
+
 
 document.addEventListener('DOMContentLoaded', () => {
     loadUser()
@@ -65,6 +67,7 @@ const loadUser = () => {
             inputIdUser.value = loggedUser.usuario
             titulo.innerHTML = loggedUser.usuario
             titulo2.innerHTML = loggedUser.email
+            userFrom = loggedUser.usuario
             //console.log('=>', response)
         })
     }
@@ -78,5 +81,5 @@ function irHilo(event) {
     const usuario = encodeURIComponent(divClickeado.querySelector('.usuarioName').textContent);
     const fecha = encodeURIComponent(divClickeado.querySelector('.fecha').textContent);
 
-    window.location.href = `http://localhost:8888/proy-x/hilo.html?usuario=${usuario}&fecha=${fecha}`;
+    window.location.href = `http://localhost:8888/proy-x/hilo.html?usuario=${usuario}&fecha=${fecha}&fromUser=${userFrom}`;
 }
