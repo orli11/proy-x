@@ -244,9 +244,14 @@ img {
     color: var(--azul)
 }
 
+/* Estilo normal para las etiquetas <div> */
+.row > div {
+    cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
+    transition: background-color 0.3s ease-in-out; /* Agrega transición suave para una animación más agradable */
+}
 
-/* PARTE DE HILO */
-.bi-arrow-left {
-    font-size: 2em;
-    color: black; /* Ajusta este valor a tu gusto */
+/* Estilo de hover para las etiquetas <div> */
+.row > div:hover {
+    background-color: #f0f0f0; /* Cambia el color de fondo al pasar el ratón sobre el elemento */
+    border-radius: 5px;
 }

@@ -19,4 +19,4 @@
         echo json_encode(['STATUS' => 'ERROR']);
     }
 
-?>
+?> 
