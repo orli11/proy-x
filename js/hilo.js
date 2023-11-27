@@ -70,3 +70,5 @@ const TraerUserCard = () => {
 function backHome(){
     window.history.back();
 }
+
+
