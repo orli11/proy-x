@@ -43,3 +43,5 @@ const loadDataPost = () => {
 function backHome(){
     window.history.back();
 }
+
+
