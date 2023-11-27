@@ -24,6 +24,19 @@ const loadDataPost = () => {
     .then(async (response) => {
         const posts = await response.json()
         console.log(posts)
+        
+        // Encuentra los elementos HTML
+        let titulo = document.querySelector('#titulo');
+        let usuarioName = document.querySelector('.usuarioName');
+        let usuario = document.querySelector('.usuario');
+        let comentario = document.querySelector('#comentario');
+        let fecha = document.querySelector('.fecha');
+
+        // Asigna los valores del objeto JSON a los elementos HTML
+        titulo.textContent = posts.titulo;
+        usuarioName.textContent = posts.id_usu;
+        comentario.textContent = posts.mensaje;
+        fecha.textContent = posts.fecha;
     })
 }
 
