@@ -1,18 +1,21 @@
 var params = new URLSearchParams(window.location.search);
 var usuario = params.get('usuario');
 var fecha = params.get('fecha');
+var fromUser = params.get('fromUser');
 
 console.log(usuario);
 console.log(fecha); 
+console.log(fromUser)
 
 document.addEventListener('DOMContentLoaded', () => {
     loadDataPost()
+    TraerUserCard()
 })
 
 const loadDataPost = () => {
     const sendData = {
         usuario,
-        fecha
+        fecha,
     }
     fetch('./Backend/Files/loadHilo.php', {
         method: 'POST',
@@ -37,6 +40,31 @@ const loadDataPost = () => {
         usuarioName.textContent = posts.id_usu;
         comentario.textContent = posts.mensaje;
         fecha.textContent = posts.fecha;
+    })
+}
+
+const TraerUserCard = () => {
+    const sendData = {
+        fromUser
+    }
+    fetch('./Backend/Files/loadUserCard.php', {
+        method: 'POST',
+        body: JSON.stringify(sendData),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(async (response) => {
+        const userCard = await response.json()
+        console.log(userCard)
+        
+        // Encuentra los elementos HTML
+        let usuario = document.getElementById('userBlog');
+        let usuarioEmail = document.getElementById('emailBlog');
+
+        // Asigna los valores del objeto JSON a los elementos HTML
+        usuario.textContent = userCard.usuario;
+        usuarioEmail.textContent = userCard.email;
     })
 }
 
