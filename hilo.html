@@ -127,6 +127,7 @@
                                     </div>
                                     <form method="post" action="./Backend/Files/nuevoHilo.php">
                                         <input type="hidden" name="id_post" id="id_post">
+                                        <input type="hidden" name="CommentFromUser" id="CommentFromUser">
                                         <div class="card-body row">
                                             <div class="col-2">
                                                 <img class="img-xs rounded-circle" src="./img/user.png" alt=""
@@ -155,17 +156,14 @@
                                                 <div class="d-flex align-items-center">
                                                     <img class="img-xs rounded-circle" src="./img/user.png" alt="">
                                                     <div class="ml-2">
-                                                        <p class="usuarioName">Mike Popescu</p>
-                                                        <p class="fecha">5 min ago</p>
+                                                        <p class="usuarioNameComment">Mike Popescu</p>
+                                                        <p class="fechaComment">5 min ago</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card-body">
-                                            <p class="tituloPost mb-3 tx-14">Lorem ipsum dolor sit amet, consectetur
-                                                adipisicing elit. Accusamus minima delectus nemo unde quae recusandae
-                                                assumenda.</p>
-                                            <p class="mensajePost mb-3 tx-14">Lorem ipsum dolor sit amet, consectetur
+                                            <p class="Comment mb-3 tx-14">Lorem ipsum dolor sit amet, consectetur
                                                 adipisicing elit. Accusamus minima delectus nemo unde quae recusandae
                                                 assumenda.</p>
                                         </div>
