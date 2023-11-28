@@ -245,13 +245,13 @@ img {
 }
 
 /* Estilo normal para las etiquetas <div> */
-.row > div {
+.bg-hover {
     cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
     transition: background-color 0.3s ease-in-out; /* Agrega transición suave para una animación más agradable */
 }
 
 /* Estilo de hover para las etiquetas <div> */
-.row > div:hover {
+.bg-hover:hover {
     background-color: #f0f0f0; /* Cambia el color de fondo al pasar el ratón sobre el elemento */
     border-radius: 5px;
 }
