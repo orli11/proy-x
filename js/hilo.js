@@ -106,7 +106,9 @@ const TraerUserCard = () => {
 } */
 
 function backHome(){
-    window.history.back();
+    const urlParams = new URLSearchParams(window.location.search);
+    const fromUser = urlParams.get('fromUser');
+    window.location.href = `http://localhost:8888/proy-x/home.html?usuario=${fromUser}`;
 }
 
 
