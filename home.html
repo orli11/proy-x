@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/style.css">
+ 
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
@@ -18,7 +21,6 @@
 <body>
     <div class="container mt-3">
         <div class="profile-page tx-13">
-            
             <div class="row profile-body">
 
 <!-- Inicio parte izquierda blog (Menú no funcional e impresion del usuario con email) -->
@@ -58,13 +60,14 @@
                                     <i class="bi bi-twitter-x"></i>
                                     <p class="mx-3">Premium</p>
                                 </div>
-                                <div class="d-flex bg-hover mb-3">
+                                <div class="d-flex bg-hover mb-3" data-bs-toggle="modal" data-bs-target="#logoutModal">
                                     <i class="bi bi-person"></i>
                                     <p class="mx-3">Perfil</p>
-                                </div>
+                                </div>                                
                             </div>
                         </div>
                     </div>
+                    
                     <div class="card rounded mt-3">
                         <!--Tarjeta de usuario con email-->
                         <div class="card-body">
@@ -80,6 +83,7 @@
                 </div>
             
 <!-- Fin de la parte izquierda del blog -->
+
 
 <!-- Inicio de la parte central del blog (Formulario para crear post y clonado de los post) -->
                 <div class="col-md-8 col-xl-6 middle-wrapper">
@@ -182,10 +186,12 @@
                         </template>
 
                     </div>
-
+                    
                     <div id="postUsuarios">
-                        Hola
                     </div>
+
+
+
                 </div>
 
                 
@@ -268,11 +274,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- right wrapper end -->
+                <!-- right wrapper end --> 
             </div>
         </div>
-        </div>
-
+    </div>
     <script src="./js/home.js"></script>
 </body>
 </html>
