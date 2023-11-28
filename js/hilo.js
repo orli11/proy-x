@@ -8,10 +8,6 @@ var fecha = params.get('fecha');
 var fromUser = params.get('fromUser');
 
 
-console.log(usuario);
-console.log(fecha); 
-console.log(fromUser)
-
 document.addEventListener('DOMContentLoaded', () => {
     loadDataPost()
     TraerUserCard()
@@ -32,7 +28,7 @@ const loadDataPost = () => {
     })
     .then(async (response) => {
         const posts = await response.json()
-        console.log(posts)
+        //console.log(posts)
         
         const idpost = document.getElementById('id_post');
         const CommentFromUser = document.getElementById('CommentFromUser')
@@ -44,7 +40,7 @@ const loadDataPost = () => {
         let fecha = document.querySelector('.fecha');
         
         // Asigna los valores del objeto JSON a los elementos HTML
-        console.log('ESTE ES EL NOMBRE QUE SE ASSIGNA AL POST: ', fromUser);
+        //console.log('ESTE ES EL NOMBRE QUE SE ASSIGNA AL POST: ', fromUser);
         CommentFromUser.value = fromUser
         idpost.value = posts.id_pos;
         titulo.textContent = posts.titulo;
@@ -58,7 +54,7 @@ const loadComments = async () => {
     fetch(`./Backend/Files/loadCommentsHilo.php?usuario=${usuario}&fecha=${fecha}`)
     .then(async (response) => {
         const items = await response.json()
-        console.log(items)
+        //console.log(items)
         printComments(items.MESSAGE)
     })
 }
@@ -88,7 +84,7 @@ const TraerUserCard = () => {
     })
     .then(async (response) => {
         const userCard = await response.json()
-        console.log(userCard)
+       //console.log(userCard)
         
         // Encuentra los elementos HTML
         let usuario = document.getElementById('userBlog');
