@@ -28,14 +28,16 @@ const loadDataPost = () => {
         const posts = await response.json()
         console.log(posts)
         
+        const idpost = document.getElementById('id_post');
         // Encuentra los elementos HTML
         let titulo = document.querySelector('#titulo');
         let usuarioName = document.querySelector('.usuarioName');
         let usuario = document.querySelector('.usuario');
         let comentario = document.querySelector('#comentario');
         let fecha = document.querySelector('.fecha');
-
+        
         // Asigna los valores del objeto JSON a los elementos HTML
+        idpost.value = posts.id_pos;
         titulo.textContent = posts.titulo;
         usuarioName.textContent = posts.id_usu;
         comentario.textContent = posts.mensaje;
@@ -61,12 +63,18 @@ const TraerUserCard = () => {
         // Encuentra los elementos HTML
         let usuario = document.getElementById('userBlog');
         let usuarioEmail = document.getElementById('emailBlog');
-
+        
         // Asigna los valores del objeto JSON a los elementos HTML
         usuario.textContent = userCard.usuario;
         usuarioEmail.textContent = userCard.email;
+
     })
 }
+
+/* const sendComment = () => {
+    const idpost = document.getElementById('id_post');
+    idpost.value = id_pos
+} */
 
 function backHome(){
     window.history.back();
